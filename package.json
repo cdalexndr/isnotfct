@@ -1,0 +1,23 @@
+{
+  "name": "isnotfct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c && npm run copy",
+    "copy": "npm run copy:fastdom && npm run copy:html",
+    "copy:html": "copyfiles -f src/index.html build",
+    "copy:fastdom": "copyfiles -f node_modules/fastdom/fastdom.js build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastdom": "^1.0.10"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.3",
+    "copyfiles": "^2.4.1",
+    "rollup": "^2.53.2"
+  }
+}
